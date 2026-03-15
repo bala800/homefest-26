@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HomeFest 26 Mega Dinner</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* DESKTOP */
+
+      body {
+        font-family: Poppins;
+        background-image: url("traditional-bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+      }
+
+      /* DARK OVERLAY */
+
+      .overlay {
+        background: rgba(0, 0, 0, 0.65);
+        min-height: 100vh;
+      }
+
+      /* HERO */
+
+      .hero {
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+      .logo {
+        width: 120px;
+        margin-bottom: 15px;
+      }
+
+      .present {
+        color: #f5f5f5;
+        letter-spacing: 3px;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .hero h1 {
+        font-family: Cinzel;
+        font-size: 60px;
+        color: #ffd700;
+        letter-spacing: 4px;
+      }
+
+      .hero h2 {
+        font-family: Cinzel;
+        font-size: 42px;
+        color: white;
+        margin-top: 10px;
+      }
+
+      .divider {
+        width: 120px;
+        height: 4px;
+        background: gold;
+        margin: 25px auto;
+        border-radius: 5px;
+      }
+
+      /* MENU */
+
+      .container {
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .menu {
+        width: 850px;
+        background: #fff8e7;
+        border-radius: 20px;
+        padding: 50px;
+        border: 8px solid #b68d40;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      }
+
+      .menu-title {
+        text-align: center;
+        font-family: Cinzel;
+        font-size: 32px;
+        color: #7a4e00;
+        margin-bottom: 30px;
+      }
+
+      /* NUMBERED MENU */
+
+      .menu-list {
+        counter-reset: item;
+      }
+
+      .menu-list li {
+        list-style: none;
+        counter-increment: item;
+        font-size: 20px;
+        padding: 15px;
+        border-bottom: 1px dashed #caa44f;
+        color: #4a2c00;
+        display: flex;
+        align-items: center;
+      }
+
+      .menu-list li:last-child {
+        border: none;
+      }
+
+      .menu-list li::before {
+        content: counter(item) ".";
+        font-weight: bold;
+        color: #7a4e00;
+        margin-right: 10px;
+      }
+
+      /* FOOTER */
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        color: white;
+        font-size: 16px;
+      }
+
+      /* MOBILE BACKGROUND FIX */
+
+      @media (max-width: 768px) {
+        body {
+          background-size: contain; /* show full image */
+          background-position: center top;
+          background-color: black; /* fill empty space */
+        }
+
+        .hero h1 {
+          font-size: 38px;
+        }
+
+        .hero h2 {
+          font-size: 26px;
+        }
+
+        .menu {
+          width: 95%;
+          padding: 30px;
+        }
+
+        .logo {
+          width: 90px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="overlay">
+      <div class="hero">
+        <img src="logo.png" class="logo" />
+
+        <div class="present">MIT HOSTEL PRESENTS</div>
+
+        <h1>HOMEFEST 26</h1>
+        <h2>MEGA DINNER</h2>
+
+        <div class="divider"></div>
+      </div>
+
+      <div class="container">
+        <div class="menu">
+          <div class="menu-title">🍽 Non-Veg Menu</div>
+
+          <ul class="menu-list">
+            <li>Dindigul Seeraga Samba Mutton Biryani</li>
+            <li>Tandoori Chicken</li>
+            <li>Vanjaram Tava Fry</li>
+            <li>Nethili 65</li>
+            <li>Garlic Naan</li>
+            <li>Nool Parota</li>
+            <li>Chicken Chettinad Pepper Gravy</li>
+            <li>Boiled Egg</li>
+            <li>Kothi Halwa</li>
+            <li>Sweet Beeda</li>
+            <li>Ilaneer Payasam</li>
+            <li>Abu Gatta Ice Cream</li>
+          </ul>
+        </div>
+      </div>
+
+      <footer>HomeFest 2026 • Mega Dinner</footer>
+    </div>
+  </body>
+</html>
